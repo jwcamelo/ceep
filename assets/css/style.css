@@ -125,7 +125,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-  padding: 1rem 3rem;
+  padding: 1rem;
 }
 
 .check-button,
@@ -133,9 +133,11 @@ body {
   background-color: #f6f1d1;
   border: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  height: 25px;
   outline: none;
   border-radius: 2px;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .task.done .check-button {
@@ -158,6 +160,7 @@ body {
 
 .content {
   margin: 0;
+  width: 65%;
 }
 
 .task.done .content {
