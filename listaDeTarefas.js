@@ -1,19 +1,21 @@
-const novaTarefa = document.querySelector("[data-form-button]");
+(() => {
+  const novaTarefa = document.querySelector("[data-form-button]");
 
-novaTarefa.addEventListener("click", adicionarTarefa);
+  novaTarefa.addEventListener("click", adicionarTarefa);
 
-function adicionarTarefa(event) {
-  event.preventDefault();
-  const lista = document.querySelector("[data-lista]");
-  const input = document.querySelector("[data-form-input]");
-  const tarefa = document.createElement("li");
+  function adicionarTarefa(event) {
+    event.preventDefault();
+    const lista = document.querySelector("[data-lista]");
+    const input = document.querySelector("[data-form-input]");
+    const tarefa = document.createElement("li");
 
-  tarefa.classList.add("task");
+    tarefa.classList.add("task");
 
-  const conteudo = `<p class="content">${input.value}</p>`;
+    const conteudo = `<p class="content">${input.value}</p>`;
 
-  tarefa.innerHTML = conteudo;
-
-  lista.appendChild(tarefa);
-  input.value = "";
-}
+    tarefa.innerHTML = conteudo;
+    tarefa.appendChild(BotaoConluir());
+    lista.appendChild(tarefa);
+    input.value = "";
+  }
+})();
