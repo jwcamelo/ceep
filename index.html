@@ -20,16 +20,21 @@
 
       <form class="form" action="">
         <input class="form-input" type="text" data-form-input>
-        <button class="form-button" data-form-button> Novo Item </button>
+        <input type="date" placeholder="Digite a data no formato AAAA/MM/DD" data-form-date>
+        <button class="form-button" data-form-button> Nova Tarefa </button>
       </form>
 
       <ul class="list" data-lista>
 
       </ul>
     </div>
-    <script src="js/listaDeTarefas.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+
+    <script src="js/adicionarTarefa.js"></script>
     <script src="js/deletarTarefa.js"></script>
     <script src="js/concluirTarefa.js"></script>
+    <script src="js/listarTarefas.js"></script>
 </body>
 
 </html>
