@@ -1,5 +1,5 @@
 (() => {
-  const novaTarefa = document.querySelector("[data-form-button]");
+  let tarefas = [];
   const novoItem = (event) => {
     event.preventDefault();
     const input = document.querySelector("[data-form-input]");
@@ -16,9 +16,14 @@
 
     const criaTarefa = adicionarTarefa(dados);
 
+    tarefas.push(dados);
+
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+
     lista.appendChild(criaTarefa);
     input.value = "";
   };
 
+  const novaTarefa = document.querySelector("[data-form-button]");
   novaTarefa.addEventListener("click", novoItem);
 })();
