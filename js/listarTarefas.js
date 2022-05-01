@@ -6,10 +6,12 @@ const novoItem = (event) => {
   const data = moment(calendario.value);
   const valor = input.value;
   const dataFormatada = data.format("DD / MM / YYYY");
+  const concluida = false;
 
   const dados = {
     valor,
     dataFormatada,
+    concluida,
   };
 
   const tarefasAtt = [...tarefas, dados];

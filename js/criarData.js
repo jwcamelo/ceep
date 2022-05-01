@@ -8,12 +8,12 @@ const criarData = (data) => {
 
   dataTopo.innerHTML = conteudo;
 
-  tarefas.forEach((tarefa) => {
+  tarefas.forEach((tarefa, id) => {
     const dia = moment(tarefa.dataFormatada, "DD/MM/YYYY");
     const diff = dataMoment.diff(dia);
 
     if (diff === 0) {
-      dataTopo.appendChild(adicionarTarefa(tarefa));
+      dataTopo.appendChild(adicionarTarefa(tarefa, id));
     }
   });
 
