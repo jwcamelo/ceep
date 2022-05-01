@@ -163,6 +163,10 @@ body {
   width: 65%;
 }
 
+.content-data {
+  color: #f6f1d1;
+}
+
 .task.done .content {
   text-decoration: line-through;
 }

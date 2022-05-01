@@ -3,7 +3,9 @@ const exibirTarefas = () => {
   const tarefasCadastradas = JSON.parse(localStorage.getItem("tarefas")) || [];
 
   lista.innerHTML = "";
-  tarefasCadastradas.forEach((tarefa) => {
-    lista.appendChild(adicionarTarefa(tarefa));
+  const datasUnicas = removeDatasRepetidas(tarefasCadastradas);
+  ordenaDatas(datasUnicas);
+  datasUnicas.forEach((dia) => {
+    lista.appendChild(criarData(dia));
   });
 };
